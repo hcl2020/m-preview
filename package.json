@@ -1,0 +1,28 @@
+{
+  "name": "m-preview",
+  "version": "1.0.0",
+  "description": "A plugin for previewing mobile views on a large screen",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "browser-sync start --server --startPath \"example\" --files \"**/*.css, **/*.js, **/*.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcl2020/m-preview.git"
+  },
+  "keywords": [
+    "web",
+    "mobile",
+    "preview"
+  ],
+  "author": "hcl2020 <907953320@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hcl2020/m-preview/issues"
+  },
+  "homepage": "https://github.com/hcl2020/m-preview#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12"
+  }
+}
