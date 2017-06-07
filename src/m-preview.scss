@@ -1,52 +1,108 @@
-$mainColor: #000;
-
+$phoneColor: #222;
+//$phoneColor: #c00;
+//$phoneColor: #fff;
+body{
+//  background: #ccc;
+}
 #m-preview {
-    padding: 20px;
-    background: #ffe;
+
+    padding: 50px;
+//  background: #ff0;
+    text-align: center;
+
     &-mobile {
-        background: #111;
+//      transform: rotate(270deg);
+        background: $phoneColor;
         display: inline-block;
-        padding: 0 10px;
-        border-radius: 30px;
-        box-shadow: rgb(0, 0, 0) 0px 0px 21px 2px;
-        border: 1px solid rgb(0, 0, 0);
+        padding: 0 4px;
+        border-radius: 26px;
+        box-shadow: #000 6px 6px 20px 2px;
+        border: #999 2px solid;
         iframe {
             width: 375px;
             height: 667px;
             background: #fff;
-            border: none;
+            border: #000 2px solid;
+            border-radius: 5px;
             margin: 0;
             padding: 0;
             display: block;
         }
+        // 听筒、摄像头
         p {
             margin: 0;
-            padding: 0;
-            background: #666;
-            height: 20px;
-            margin: 15px 0;
-            b {
+            padding: 20px 0;
+            position: relative;
+            // 听筒
+            mark{
+                display: block;
+                height: 8px;
+                margin: 0 auto;
+                width: 70px;
+                background: #333 + $phoneColor * 0.5;
+                box-shadow: (#999 + $phoneColor * 0.3) 1px 1px 1px;
+                border-radius: 5px;
+            }
+            // 摄像头
+            &::before {
+                content: " ";
+                position: absolute;
                 display: inline-block;
+                top: 16px;
                 height: 16px;
                 width: 16px;
                 border-radius: 50%;
+                background: #ccc;
+//              box-shadow: inset #000 -3px 3px 9px 1px;
+                box-shadow: inset #080808 -8px 1px 7px 4px;
+//              left: 80px;
+                left: 22%;
+
+            }
+            // 光传感器
+            &::after {
+                position: absolute;
+                display: inline-block;
+                content: " ";
+                top: 20px;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
                 background: #000;
-                border: 1px #999 solid;
-                position: relative;
-                left: 3em;
+//              left: 120px;
+                left: 32%;
             }
         }
+        // Home指纹
         span {
-            box-shadow: rgb(255, 255, 255) 1px 2px 3px;
+            box-shadow: #fff 1px 2px 3px;
             display: block;
-            height: 40px;
+            height: 36px;
             width: 80px;
             border-radius: 10px;
-            background: #111;
-            margin: 10px auto;
+         // background: $phoneColor * 1.1;
+            background: rgba(0, 0, 0, 0.3);
+            margin: 15px auto;
+        }
+    }
+
+    &-message{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: rgba(#ccc, 0.5);
+        padding: 10px;
+
+        color: #666;
+        text-align: center;
+        font-size: 16px;
+        a{
+            color: #666;
         }
     }
 }
+
 
 
 /*
