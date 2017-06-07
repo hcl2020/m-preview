@@ -4,6 +4,24 @@ $phoneColor: #222;
 body{
 //  background: #ccc;
 }
+
+/*
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+*/
+
+
 #m-preview {
 
     padding: 50px;
