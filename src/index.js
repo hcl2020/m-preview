@@ -13,13 +13,13 @@
             strStyle
             +'</style>';
 
-        var $body = document.getElementsByTagName('body')[0];
+        var $body = document.body;
         $body.innerHTML = strTpl;
         // TODO 移除 head style 和 link style
 
         var $iframe = document.getElementsByTagName('iframe')[0];
-        var _window = $iframe.contentWindow;
-        _window.onload = function() {
+        $iframe.onload = function(){
+            var _window = $iframe.contentWindow;
             /* 处理滚动条 */
             var strCss = '::-webkit-scrollbar{width:6px;height:5px;background-color:rgba(0,0,0,0.05)}'+
                 '::-webkit-scrollbar-thumb{border-radius:3px;background-color:rgba(0,0,0,0.3)}'+
@@ -28,13 +28,28 @@
             $style.innerHTML = strCss;
             _window.document.getElementsByTagName('head')[0].append($style);
             /* 处理地址栏 */
+            var pathname = _window.location.pathname;
 
+            history.pushState(null, _window.document.title, pathname);
+            _window.addEventListener('hashchange', function(Event){
+                window.location.hash = _window.location.hash;
+            });
 
-
+            var _replaceState = _window.history.replaceState;
+            if(_replaceState){
+                _window.history.replaceState = function(){
+                    _replaceState.apply(_window.history, arguments);
+                    history.replaceState.apply(history, arguments);
+                }
+            }
+            var _pushState = _window.history.pushState;
+            if(_pushState){
+                _window.history.pushState = function(){
+                    _pushState.apply(_window.history, arguments);
+                    history.pushState.apply(history, arguments);
+                }
+            }
         }
-
-
-
     }
 
     window.onload= function(){
