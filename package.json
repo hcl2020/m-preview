@@ -1,6 +1,6 @@
 {
   "name": "m-preview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for previewing mobile views on a large screen",
   "main": "src/index.js",
   "scripts": {
@@ -23,6 +23,5 @@
   },
   "homepage": "https://github.com/hcl2020/m-preview#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.12"
   }
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+    <head>
+        <meta charset="utf-8" />
+        <title>mobile-preview</title>
+        <link rel="stylesheet" type="text/css" href="../dist/m-preview.css"/>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    </head>
+
+    <body>
+
+        <div id="m-preview">
+            <div id="m-preview-mobile">
+                <p><mark></mark><b></b></p>
+                <iframe src="/example/mobile.html"></iframe>
+                <span></span>
+            </div>
+            <div id="m-preview-message">建议使用手机访问,或访问电脑版</div>
+        </div>
+
+    </body>
+
+</html>
+<!--setTimeout(function(){
+    log('=== Enable3DView ===');
+    $('.style-i .s-list a').eq(2).one('click','img', function(e){
+        e.stopPropagation();
+        Enable3DView();
+        S.clear();
+    });
+}, 2000);
+
+if( window.innerWidth > 800 ){
+    EnableMobileView();
+}
+
+
+function Enable3DView(){
+    log('================***==')
+
+    var $body = $('body');
+    var $page = $('.page');
+
+    $('html').css({
+        'transform': 'scale(0.9)',
+        'perspective': '100vh',
+//      'perspective-origin': '50% 50%'
+    });
+
+    $body.css({
+        'perspective': '100vh',
+        'transition':  '.2s all',
+        'overflow':    'visible'
+    });
+    $page.css({
+        'transition': '.2s all'
+    });
+
+    var last = new Date();
+    function orientationHandler(event) {
+        if( (new Date()) - last < 200 ){
+            return false;
+        }
+        last = new Date();
+//      log( event.alpha,event.beta,event.gamma )
+        var a=Math.round(Math.round(event.alpha*10)/10 );
+        var b=Math.round(Math.round(event.beta *10)/10 );
+        var g=Math.round(Math.round(event.gamma*10)/10 );
+        $body.css({
+            'transform':  'rotateX('+b+'deg) rotateY('+(-g)+'deg)' // rotateZ('+(a)+'deg)'
+        });
+//      $('header').eq(0).html( a + '  ' + b + '  ' + g  + ' ' + b + ':' + g);
+    }
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener("deviceorientation", orientationHandler, false);
+    }
+    if (window.DeviceMotionEvent) {
+      window.addEventListener("devicemotion", motionHandler, false);
+    }
+    var last2 = new Date();
+    function motionHandler(event) {
+//      document.getElementById("interval").innerHTML = event.interval;
+        if( (new Date()) - last2 < 200 ){
+            return false;
+        }
+        last2 = new Date();
+        var acc = event.acceleration;
+        var accGravity = event.accelerationIncludingGravity;
+        var rotationRate = event.rotationRate;
+//  accGravity = acc;
+//  log( JSON.stringify( acc ) )
+//  log( JSON.stringify( accGravity ) )
+//  log( JSON.stringify( rotationRate ) )
+        function limint( num ){
+            return Math.abs(num) > 200 ? 200: num;
+        }
+        function p( num ){
+            return limint(Math.round( num ));
+        }
+        var x = - p(accGravity.x) * 4,
+            y = p(accGravity.y) * 4,
+            z = p(accGravity.z) * 4;
+        var tran = 'translate3d('+ x + 'px,'+y+'px, ' + z+'px)';
+        $page.css({
+            'transform': tran
+        });
+//      $page.html(
+//          JSON.stringify( acc ) +
+//          JSON.stringify( accGravity ) +
+//          JSON.stringify( rotationRate ) + '<br/>' + tran
+//      )
+//      $('header').eq(0).html( x + '  ' + y + '  ' + z  + '  <br/>t:' + tran);
+    }
+}
+//=============
+
+});-->
