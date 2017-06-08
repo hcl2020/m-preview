@@ -1,6 +1,6 @@
 {
   "name": "m-preview",
-  "version": "2.0.1",
+  "version": "2.0.5",
   "description": "A plugin for previewing mobile views on a large screen",
   "main": "dist/m-preview.js",
   "scripts": {
