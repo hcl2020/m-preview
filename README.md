@@ -8,9 +8,16 @@
 
 ## Usage
 
+### Broswer
     <script src="dist/m-preview.js"></script>
 
+### UMD
     var mPreview = require('m-preview');
+
+### ES6
+	import mPreview from 'm-preview'
+
+----------
 
     mPreview({
         message: '建议使用手机访问此页面, 或访问此页面的<a href="#">电脑版</a>',

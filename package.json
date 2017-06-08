@@ -1,8 +1,8 @@
 {
   "name": "m-preview",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A plugin for previewing mobile views on a large screen",
-  "main": "src/index.js",
+  "main": "dist/m-preview.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "browser-sync start --server --startPath \"example\" --files \"**/*.css, **/*.js, **/*.html\""
